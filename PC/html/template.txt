@@ -1,0 +1,7 @@
+<head>
+  <meta http-equiv="refresh" content="1">
+</head>
+
+<body>
+  <div id="body"> <H1> Sei il visitatore numero:</H1> <br><div id="counter">counter_val</div></div>
+</body>
