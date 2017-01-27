@@ -1,6 +1,6 @@
 ## Contapersone
 
-System developed for Liceo Zucchi high school, Monza, Italy.
+System developed for Liceo Zucchi high school, Monza, Italy.  
 This repo is made up of two folders: one contains the program to be flashed onto an Arduino Leonardo that is used to manage the inputs from sensor and counting stuff, the other
 containing the sources for a program to be run on a PC that fetches data from the Arduino.
 
@@ -12,5 +12,8 @@ Installation procedure for the PC side:
 * give the "make" command
 * give the "make install" command to install the executable
 
-Usage is: *executablename serialPort templateFileName outputFileName*, as an example *contapersone /dev/ttyS0 template.html output.html*
+Usage is:  
+*executablename serialPort templateFileName outputFileName*  
+
+As an example: *contapersone /dev/ttyS0 template.html output.html*
 For further info see www.silvanoseva.eu/contapersone.html (currently the page is only in italian language)
