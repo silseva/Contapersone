@@ -12,4 +12,5 @@ Installation procedure for the PC side:
 * give the "make" command
 * give the "make install" command to install the executable
 
+Usage is: *executablename serialPort templateFileName outputFileName*, as an example *contapersone /dev/ttyS0 template.html output.html*
 For further info see www.silvanoseva.eu/contapersone.html (currently the page is only in italian language)
