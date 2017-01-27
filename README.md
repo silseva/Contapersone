@@ -15,5 +15,6 @@ Installation procedure for the PC side:
 Usage is:  
 *executablename serialPort templateFileName outputFileName*  
 
-As an example: *contapersone /dev/ttyS0 template.html output.html*
+As an example: *contapersone /dev/ttyS0 template.html output.html*  
+  
 For further info see www.silvanoseva.eu/contapersone.html (currently the page is only in italian language)
