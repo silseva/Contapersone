@@ -18,11 +18,11 @@
  *
  */
 
-#include "seriale.h"
+#include "serialport.h"
 
 using namespace std;
 
-Seriale::Seriale(const char* name)
+SerialPort::SerialPort(const char* name)
 {
     serialFd = open(name, O_RDWR | O_NOCTTY | O_NDELAY);
     fcntl(serialFd, F_SETFL, 0);
@@ -62,13 +62,13 @@ Seriale::Seriale(const char* name)
     }
 }
 
-Seriale::~Seriale()
+SerialPort::~SerialPort()
 {
     tcflush(serialFd, TCIFLUSH);
     close(serialFd);
 }
 
-uint32_t Seriale::requestValue()
+uint32_t SerialPort::requestValue()
 {
     // send command
     uint8_t cmd[] = {0x55, 0xDD};

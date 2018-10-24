@@ -18,14 +18,12 @@
 
 #include <unistd.h>
 #include <cstdio>
-
 #include <fstream>
 #include <ios>
 #include <iostream>
 #include <regex>
 #include <string>
-
-#include "seriale.h"
+#include "serialport.h"
 
 #define REGX_TAG "counter_val"
 
@@ -43,11 +41,11 @@ int main(int argc, char **argv)
 
     ifstream templateFile;
     ofstream outputFile;
-    Seriale *seriale;
+    SerialPort *seriale;
 
     try
     {
-        seriale = new Seriale(argv[1]);
+        seriale = new SerialPort(argv[1]);
     }
     catch (exception e)
     {
@@ -72,6 +70,7 @@ int main(int argc, char **argv)
 
     while (1)
     {
+
         uint32_t value = seriale->requestValue();
         string line;
         while (getline(templateFile, line))

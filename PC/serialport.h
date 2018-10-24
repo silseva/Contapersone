@@ -18,8 +18,8 @@
  *
  */
 
-#ifndef SERIALE_H
-#define SERIALE_H
+#ifndef SERIAL_PORT_H
+#define SERIAL_PORT_H
 
 #include <errno.h>
 #include <fcntl.h>
@@ -29,11 +29,11 @@
 #include <cstdio>
 #include <stdexcept>
 
-class Seriale
+class SerialPort
 {
 public:
-    Seriale(const char* name);
-    ~Seriale();
+    SerialPort(const char* name);
+    ~SerialPort();
     uint32_t requestValue();
 
 private:
