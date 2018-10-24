@@ -14,7 +14,7 @@ EXECNAME := contapersone
 ## with a different command
 SRC := main.cpp seriale.cpp
 CXX := g++
-CXXFLAGS := -std=c++11
+CXXFLAGS := -std=c++11 -O2 -fstack-protector-strong -D_FORTIFY_SOURCE=2
 
 all: $(EXECNAME)
 
