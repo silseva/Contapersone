@@ -47,7 +47,7 @@ int main(int argc, char **argv)
     {
         seriale = new SerialPort(argv[1]);
     }
-    catch (exception e)
+    catch (exception& e)
     {
         e.what();
         getchar();
