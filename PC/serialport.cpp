@@ -72,14 +72,18 @@ uint32_t SerialPort::requestValue()
 {
     // send command
     uint8_t cmd[] = {0x55, 0xDD};
-    write(serialFd, cmd, 2);
+    int n = write(serialFd, cmd, 2);
+    if (n < 0)
+        return 0;
 
     // HACK: because MCU and PC have the same endianness, this trick
     // can be done. We cast a pointer to uint32_t to pointer to uint8_t
     // and the we tell the system to read 4 bytes, automagically placing them
     // in the right order
     uint32_t value = 0;
-    read(serialFd, reinterpret_cast<uint8_t*>(&value), 4);
+    n = read(serialFd, reinterpret_cast<uint8_t*>(&value), 4);
+    if (n < 0)
+        return 0;
 
     tcflush(serialFd, TCIFLUSH);
 

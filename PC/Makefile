@@ -14,7 +14,7 @@ EXECNAME := contapersone
 ## with a different command
 SRC := main.cpp serialport.cpp
 CXX := g++
-CXXFLAGS := -std=c++11 -O2 -fstack-protector-strong -D_FORTIFY_SOURCE=2 -Wall
+CXXFLAGS := -std=c++11 -O2 -fstack-protector-strong -D_FORTIFY_SOURCE=2 -Wall -Wextra
 
 all: $(EXECNAME)
 
