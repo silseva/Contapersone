@@ -12,9 +12,9 @@ EXECNAME := contapersone
 ## Don't touch anything below this line, except for
 ## the CXX directive in the case you have to call g++
 ## with a different command
-SRC := main.cpp seriale.cpp
+SRC := main.cpp serialport.cpp
 CXX := g++
-CXXFLAGS := -std=c++11 -O2 -fstack-protector-strong -D_FORTIFY_SOURCE=2
+CXXFLAGS := -std=c++11 -O2 -fstack-protector-strong -D_FORTIFY_SOURCE=2 -Wall
 
 all: $(EXECNAME)
 
